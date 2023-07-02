@@ -9,7 +9,11 @@ async function connect() {
         socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
         family: 4, // Use IPv4, skip trying IPv6
     };
-    mongoose.connect("mongodb://localhost:27017/hospital_app", options);
+    // mongoose.connect("mongodb://localhost:27017/hospital_app", options);
+    mongoose.connect(
+      "mongodb+srv://rkp33510:956248713@cluster0.jqv0plx.mongodb.net/?retryWrites=true&w=majority",
+      options
+    );
     const connection = mongoose.connection;
 
     connection.once("open", () => {
