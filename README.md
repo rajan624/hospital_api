@@ -3,7 +3,22 @@
 
 This API is designed to facilitate the testing, quarantine, and well-being management of COVID-19 patients in a hospital allocated by the government. It provides endpoints for doctors and patients to perform various operations.
 
-#Table of Contents
+- [Installation](#installation)
+
+  
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/rajan624/hospital_api
+   cd hospital1_api
+   npm install  //install dependecies
+   nodemon index.js   //start the server
+
+
+
+# Table of Contents
 
 
                                                       Authentication
@@ -34,7 +49,7 @@ This API is designed to facilitate the testing, quarantine, and well-being manag
 
                                                          Authentication
 
-/doctors/register
+# /doctors/register
 
 
 Register a doctor in the system.
@@ -61,7 +76,7 @@ Response:
 400 Bad Request: Invalid request body or missing parameters.
 
 
-/doctors/login
+# /doctors/login
 
 
 Authenticate a doctor and obtain a JSON Web Token (JWT) for subsequent API calls.
@@ -85,7 +100,7 @@ Response:
 
 
                                                                 Patients
-/patients/register
+# /patients/register
 
 
 Register a patient in the system.
@@ -111,7 +126,7 @@ Response:
 400 Bad Request: Invalid request body or missing parameters.
 
 
-/patients/:id/create_report
+# /patients/:id/create_report
 
 
 Create a report for a patient after a checkup.
@@ -148,7 +163,7 @@ Response:
 404 Not Found: Patient not found.
 
 
-/patients/:id/all_reports
+# /patients/:id/all_reports
 
 
 Get all the reports of a patient, sorted from oldest to latest.
@@ -173,7 +188,7 @@ Response:
                                                         Reports
 
                                                         
-/reports/:status
+# /reports/:status
 
 
 Get all the reports of all the patients filtered by a specific status.
